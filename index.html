@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <title>ConsoleView</title>
     <meta charset="utf-8">
 </head>
 <body>
@@ -18,6 +19,11 @@
             })();<br>
         </code>
     </pre>
-    <p>に変更</p>
+    <p>に変更。一行ver:</p>
+    <pre>
+        <code>
+            javascript:(function () {const script = document.createElement('script');script.src='//cdn.jsdelivr.net/npm/eruda';document.body.append(script);script.onload = function () {eruda.init()}})();
+        </code>
+    </pre>
 </body>
 </html>
