@@ -5,7 +5,19 @@
 </head>
 <body>
     <p>このページをブックマークに追加して,リンクを</p>
-    <pre><code>javascript:(function () { var script =document.createElement('script');script.src="//cdn.jsdelivr.net/npm/eruda";document.body.appendChild(script); script.onload = function () { eruda.init() } })();</code></pre>
+    <pre>
+        <code>
+            javascript:<br>
+            (function () { <br>
+                const script = document.createElement('script');<br>
+                script.src='//cdn.jsdelivr.net/npm/eruda';<br>
+                document.body.append(script);<br>
+                script.onload = function () {<br>
+                    eruda.init() <br>
+                }<br>
+            })();<br>
+        </code>
+    </pre>
     <p>に変更</p>
 </body>
 </html>
