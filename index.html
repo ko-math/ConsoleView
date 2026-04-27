@@ -3,8 +3,18 @@
 <head>
     <title>ConsoleView</title>
     <meta charset="utf-8">
+    <style>
+        .copyButton{
+            position:relative;
+            left:30px;
+            border-radius:10px;
+            width:50px;
+            height:25px;
+        }
+    </style>
 </head>
 <body>
+    
     <p>このページをブックマークに追加して,リンクを</p>
     <pre>
         <code>
@@ -19,18 +29,20 @@
             })();
         </code>
     </pre>
-    <p>に変更。一行ver:</p>
-    <pre>
-        <code>
-            javascript:(function () {const script = document.createElement('script');script.src='//cdn.jsdelivr.net/npm/eruda';document.body.append(script);script.onload = function () {eruda.init()}})();
-        </code>
-    </pre>
-    <p>自分で作るなら</p>
+    <button onclick="copy()" id="copyButton">Copy</button>
+    <p>に変更。自分で作るなら</p>
     <pre>
         <code>
             javascript:[hogehoge];
         </code>
     </pre>
     <p>という感じにしてください。iPadならスマート句読点はオフにしてください。</p>
+    <script>
+        function copy(){
+            const code = document.querySelector('#copy').textContent;
+            const oneLine = code.replace(/\s+/g, ' ').trim();
+            navigator.clipboard.writeText(oneLine);
+        }
+    </script>
 </body>
 </html>
