@@ -41,6 +41,7 @@
         function copy(){
             const code = document.querySelector('#copy').textContent;
             const oneLine = code.replace(/\s+/g, ' ').trim();
+            alert('copied!');
             navigator.clipboard.writeText(oneLine);
         }
     </script>
